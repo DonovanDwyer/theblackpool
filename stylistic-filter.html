@@ -1,0 +1,564 @@
+<html>
+    <head>
+        <title>Title Here</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Gabarito:wght@400..900&family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --distant-color: black;
+                --bg-color:#151414;
+                --midgrnd-color: #1e1e1e;
+                --foregrnd-color:#464646;
+                --main-text-color: #aca7a7;
+                --brighter-text-color: white;
+                --darker-text-color: grey;
+                font-family: "Urbanist", sans-serif;
+                font-weight: 300;
+            }
+            .thick {
+                font-family: "Inter", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 500;
+                font-style: normal;
+                font-variation-settings: "slnt" 0;
+            }
+            .chubby {
+                font-weight: 400;
+            }
+
+            body {
+                background-color: var(--distant-color);
+                margin: 0;
+            }
+            ol, ul {
+                list-style-type: none;
+            }
+            .bright-text {
+                color: var(--brighter-text-color);
+            }
+            .logo {
+                letter-spacing: -1px;
+                font-size: 1.85rem;
+            }
+            .link {
+                font-size: 0.9rem;
+                color:var(--main-text-color);
+                word-spacing: -2px;
+            }
+            .link:hover {
+                color: var(--brighter-text-color);
+                cursor: pointer;
+            }
+            button {
+                outline: none;
+                background: transparent;
+                border: none;
+                color: var(--main-text-color);
+                cursor: pointer;
+            }
+            button:hover {
+                color: var(--brighter-text-color);
+            }
+
+            div#parent {
+                width: 100vw;
+                height: 100vh;
+                display: grid;
+                grid-template-columns: 24vw auto;
+                grid-template-rows: auto 9vh;
+                gap: 8px 8px;
+            }
+
+            main.main-window nav {
+                grid-row: 1/2;
+                grid-column: 1/3;
+                z-index: 1;
+                height: 3rem;
+                width: 100%;
+                background-color: black;
+                opacity: 0.7;
+                position: fixed;
+            }
+            nav > ol.nav-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                margin-top: 10px;
+            }
+            nav > ol.nav-list > li {
+                color: var(--main-text-color);
+                align-self: center;
+                transition: font-size 0.25s ease 0s;
+            }
+            ol.nav-list > li.back-button {
+                grid-column: 1/2;
+            }
+            .material-symbols-outlined {
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+            }
+            ol.nav-list > li.forward-button {
+                grid-column: 2/3;
+            }
+            ol.nav-list > li.search-button {
+                grid-column: 4/5;
+            }
+            nav > ol.nav-list > li:hover {
+                color: var(--brighter-text-color);
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .material-symbols-outlined {
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+            }
+            search.search-box {
+                height: 2rem;
+                width: 100%;
+            }
+            input#big-search {
+                border: none;
+            }
+            textarea:focus, input:focus {
+                outline: none;
+            }
+
+            #parent main {
+                display: grid;
+                grid: 1.1rem 250px 70px auto / 1fr 4fr;
+                grid-column:2/3;
+                grid-row:1/2;
+                background-color: var(--bg-color);
+                color: white;
+                overflow-y:scroll;
+                border-radius: 8px;
+                margin-right: 8px;
+                margin-top: 7px;
+            }
+
+            main header {
+                grid-row: 1/3;
+                grid-column: 1/3;
+                color: black;
+                background-image: linear-gradient(0deg, rgba(21, 20, 20, 1), 47%,rgb(0 0 0 / 73%)), url(./images/static.gif);
+                /* background: linear-gradient(0deg, var(--bg-color), 51%, #4d0003); */
+            }
+            main > header > h1 {
+                font-family: "Gabarito", sans-serif;
+                font-weight: 500;
+                letter-spacing: -6px;
+                word-spacing: -19px;
+                font-size: 9rem;
+                margin: 4rem 0px 100px 2px;
+                
+            }
+            main div.headboard {
+                grid-row: 3/4;
+                grid-column: 1/3;
+                display: grid;
+                grid-template-rows: 80px; 
+                grid-template-columns: 1fr 1fr 3fr 1fr; 
+            }
+            .btn-1 {
+                grid-row: 1/2;
+                grid-column: 1/2;
+            }
+            .btn-2 {
+                grid-row: 1/2;
+                grid-column: 2/3;
+            }
+            .btn-3 {
+                grid-row: 1/2;
+                grid-column: 4/5;
+            }
+
+            section.track-listing {
+                grid-row: 4/auto;
+                grid-column: 1/3;
+                font-size: 0.89rem;
+            }
+            ol.track-table {
+                padding: 0px 25px;
+                color: var(--main-text-color);
+            }
+            ol.track-table > li:not(.table-header) {
+                border-radius:8px;
+            }
+            ol.track-table > li:not(.table-header):hover {
+                background-color: var(--foregrnd-color);
+                color: white;
+            }
+            ol.track-table > li.table-header {
+                height:33px;
+                border-bottom: 1px solid #2e2e2e;
+            }
+            ol.track-table > li {
+                display: grid;
+                grid-column: 1/5;
+                grid-template-columns: 1fr 5fr 3fr 3fr 3fr 1fr;
+                height: 4rem;
+                background-color: var(--bg-color);
+                opacity: 0.7;
+                padding: 0px 15px;
+            }
+            ol.track-table > li > span {
+                align-self: center;
+            }
+            section.track-listing ol {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                grid-template-rows: 35px repeat(auto-fit, 64px);
+            }
+
+            div#parent > div.sidebar {
+                color:var(--main-text-color);
+                grid-column:1/2;
+                grid-row:1/2;
+            }
+            div.sidebar > ul.sidebar-menu {
+                display: grid;
+                grid-template-rows: 8rem 2fr 4fr;
+                height:100%;
+                grid-gap: 8px;
+                padding-left: 0;
+                margin: 7px 0px 0px 8px;
+            }
+            div.sidebar > ul > div {
+                background-color: var(--bg-color);
+                border-radius: 8px;
+                padding: 7px 0px 10px 17px ;
+            }
+            #home-icon {
+                color: var(--main-text-color);
+                transition: color 1s ease-out;
+            }
+            .link:hover #home-icon {
+                color: #005c00;
+                transition: color 1.5s ease-out;
+            }
+            #pool-icon {
+                color: var(--main-text-color);
+                transition: color 1s ease-out;
+            }
+            .link:hover #pool-icon {
+                color: #222121;
+                transition: color 1.5s ease-out;
+            }
+            #library-icon {
+                color: var(--main-text-color);
+                transition: color 1s ease-out;
+            }
+            .mid-panel:hover #library-icon {
+                color: #6b0000;
+                transition: color 1.5s ease-out;
+            }
+            #library-link {
+                font-size: 0.9rem;
+                color:var(--main-text-color);
+                word-spacing: -2px;
+            }
+            .mid-panel:hover #library-link {
+                color: var(--brighter-text-color);
+            }
+            #collection-icon {
+                color: var(--main-text-color);
+                transition: color 1s ease-out;
+            }
+            #collection-link {
+                font-size: 0.9rem;
+                color:var(--main-text-color);
+                word-spacing: -2px;
+            }
+            .bottom-panel:hover #collection-link {
+                color: var(--brighter-text-color);
+            }
+            .bottom-panel:hover #collection-icon {
+                color: #a05e00;
+                transition: color 1.5s ease-out;
+            }
+            .top-panel {
+                display: grid;
+                grid-template-rows: 2.5rem 1fr 1fr;
+                align-items: center;
+            }
+            .mid-panel, .bottom-panel {
+                display: grid;
+                grid-template-rows: 2rem auto;
+                gap: 5px;
+            }
+            .sidebar-row {
+                display: grid;
+                grid-template-columns: 2rem 4fr 1.7rem;
+                padding-right:10px;
+            }
+            .sidebar-submenu {
+                background-color: var(--midgrnd-color);
+                color: #9d9595;
+                border-radius: 5px;
+                padding: 1rem;
+                display: grid;
+                grid-template-rows: repeat(auto-fill, 20px);
+                height: min(90px);
+                margin-right:1rem;
+            }
+            .directory-row {
+                display: grid;
+                grid-template-columns: 1.5rem 4fr;
+                align-items: center;
+            }
+            li.directory-row > span.sidebar-icon {
+                font-size: 1.2rem;
+            }
+            .add-button {
+                justify-self: center;
+                background-color: grey;
+                color: black;
+                border-radius: 20px;
+                font-size: 1rem;
+            }
+            .sidebar-icon {
+                align-self: center;
+            }
+            .sidebar-link {
+                align-self: center;
+            }
+            #home-link {
+                padding-top: 4px;
+            }
+            #pool-link {
+                padding-top: 1px;
+            }
+            ul.sidebar-menu > div.bottom-panel {
+                margin-bottom:7px;
+            }
+
+            #parent footer {
+                grid-column:1/3;
+                grid-row:2/3;
+                /* background-image: url('./images/cassette-round.gif'); */
+                margin: 0px 8px;
+                overflow: hidden;
+            }
+            #myVideo {
+                width: 100%;
+                position: relative;
+                bottom: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <div  id="parent">
+            <main class="main-window">
+                <nav>
+                    <ol class="nav-list">
+                        <li class="back-button material-symbols-outlined">
+                            chevron_left
+                        </li>
+                        <li class="forward-button material-symbols-outlined">
+                            chevron_right
+                        </li>
+                        <li class="search-button">
+                            <search class="material-symbols-outlined">
+                                search
+                            </search>
+                        </li>
+                    </ol>
+                </nav>
+                <header class="top-portion">
+                    <h1>the pool</h1>
+                </header>
+                <div class="headboard">
+                    <button class="btn-1 material-symbols-outlined">
+                        play_circle
+                    </button>
+                    <button class="btn-2">
+                        
+                    </button>
+                    <button class="btn-3 material-symbols-outlined">
+                        lists
+                    </button>
+                </div>
+                <section class="track-listing">
+                    <ol class="track-table">
+                        <li class="table-header">
+                            <span>#</span>
+                            <span>title</span>
+                            <span>collection</span>
+                            <span>genre</span>
+                            <span>last session</span>
+                            <span>length</span>
+                        </li>
+                        <li>
+                            <span>005</span>
+                            <span class="bright-text chubby">Bates Motel</span>
+                            <span>Bates Motel</span>
+                            <span>Alternative Rock, Pop Rock</span>
+                            <span>Yesterday</span>
+                            <span>3:12</span>
+                        </li>
+                        <li>
+                            <span>008</span>
+                            <span class="bright-text chubby">Backwoods</span>
+                            <span>Backwoods</span>
+                            <span>Indie Rock</span>
+                            <span>3 months ago</span>
+                            <span>4:51</span>
+                        </li>
+                        <li>
+                            <span>020</span>
+                            <span class="bright-text chubby">Criminal Conduct</span>
+                            <span>The Black Tapes EP</span>
+                            <span>Grunge</span>
+                            <span>2 hours ago</span>
+                            <span>2:51</span>
+                        </li>
+                        <li>
+                            <span>022</span>
+                            <span class="bright-text chubby">The Omen</span>
+                            <span>You'll Cowards Don't Even Smoke Crack</span>
+                            <span>Emo</span>
+                            <span>30 seconds ago</span>
+                            <span>1:30</span>
+                        </li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                        <li>More things</li>
+                    </ol>
+                </section>
+            </main>
+            <div class="sidebar">
+                <ul class="sidebar-menu">
+                    <div class="top-panel">
+                        <li class="bright-text logo">
+                            theblackpool
+                        </li>
+                        <li class="thick link sidebar-row">
+                            <span id="home-icon" class="material-symbols-outlined sidebar-icon">
+                                home
+                            </span>
+                            <span id="home-link" class="sidebar-link">
+                                home
+                            </span>
+                        </li>
+                        <li class="thick link sidebar-row">
+                            <span id="pool-icon" class="material-symbols-outlined sidebar-icon">
+                                water
+                            </span>
+                            <span id="pool-link" class="sidebar-link">
+                                the pool
+                            </span>
+                        </li>
+                    </div>
+
+                    <div class="mid-panel">
+                        <li>
+                            <span class="thick link sidebar-row">
+                                <span id="library-icon" class="material-symbols-outlined sidebar-icon">
+                                    account_balance
+                                </span>
+                                <span id="library-link" class="sidebar-link">
+                                    the library
+                                </span>
+                                <button class="material-symbols-outlined sidebar-icon add-button">
+                                    add
+                                </button>
+                            </span>
+                        </li>
+                        <li>
+                            <ol class="sidebar-submenu">
+                                <li class="directory-row link">
+                                    <span class="material-symbols-outlined sidebar-icon">
+                                        chevron_right
+                                    </span>
+                                    <span class="sidebar-link">
+                                        Super Active Projects
+                                    </span>
+                                </li>
+                                <li class="directory-row link">
+                                    <span class="material-symbols-outlined sidebar-icon">
+                                        chevron_right
+                                    </span>
+                                    <span class="sidebar-link">
+                                        Reaper
+                                    </span>
+                                </li>
+                                <li class="directory-row link">
+                                    <span class="material-symbols-outlined sidebar-icon">
+                                        chevron_right
+                                    </span>
+                                    <span class="sidebar-link">
+                                        Reason
+                                    </span>
+                                </li>
+                            </ol>
+                        </li>
+                    </div>
+                    
+                    <div class="bottom-panel">
+                        <li>
+                            <span class="thick sidebar-row">
+                                <span id="collection-icon" class="material-symbols-outlined sidebar-icon">
+                                    hive
+                                </span>
+                                <span id="collection-link" class="sidebar-link">
+                                    the collection
+                                </span>
+                                <button class="material-symbols-outlined sidebar-icon add-button">
+                                    add
+                                </button>
+                            </span>
+                        </li>
+                        <li>
+                            <ol class="sidebar-submenu">
+                                <li class="thick link">
+                                    The Black Tapes EP
+                                </li>
+                                <li class="thick link">
+                                    You'll Cowards Don't Even Smoke Crack
+                                </li>
+                            </ol>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <footer class="footer-thing-at-the-bottom">
+                <video autoplay muted loop id="myVideo">
+                    <source src="./images/Layx (1).mp4" type="video/mp4">
+                  </video>
+            </footer>
+        </div>
+    </body>
+</html>
